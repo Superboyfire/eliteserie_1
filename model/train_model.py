@@ -1,3 +1,5 @@
+import os
+os.makedirs("models", exist_ok=True)
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 import joblib
