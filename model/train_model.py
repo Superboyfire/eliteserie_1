@@ -17,4 +17,4 @@ model.fit(X, y)
 
 # Lagre modellen i riktig mappe
 print("Modellen er lagret i model/rf_model.pkl")
-joblib.dump(model, "models/rf_model.pkl")
+joblib.dump(model, "model/rf_model.pkl")
