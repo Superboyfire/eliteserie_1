@@ -11,10 +11,10 @@ from features.build_features import build_features
 st.title("Eliteserien AI-prediksjon")
 import os
 
-if not os.path.exists("models/rf_model.pkl"):
-    raise FileNotFoundError("Modellfilen finnes ikke i 'models/rf_model.pkl'. Har du kjørt train_model.py?")
+if not os.path.exists("model/rf_model.pkl"):
+    raise FileNotFoundError("Modellfilen finnes ikke i 'model/rf_model.pkl'. Har du kjørt train_model.py?")
 # Last inn modellen (må være trent og lagret før du kjører app)
-model = joblib.load("models/rf_model.pkl")
+model = joblib.load("model/rf_model.pkl")
 
 # Last inn data
 data = pd.read_csv("data/eliteserien_data.csv")
