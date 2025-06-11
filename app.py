@@ -4,11 +4,16 @@ import pandas as pd
 from features.build_features import build_features
 
 st.title("Eliteserien AI-prediksjon")
+
+# Last inn modellen (må være trent og lagret før du kjører app)
 model = joblib.load("models/rf_model.pkl")
+
+# Last inn data
 data = pd.read_csv("data/eliteserien_data.csv")
 
 match = st.selectbox("Velg kamp", data["match"])
 features = build_features(data, match)
+
 pred_winner = model.predict([features])[0]
 pred_proba = model.predict_proba([features])[0]
 
