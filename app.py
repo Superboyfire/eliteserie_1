@@ -1,4 +1,8 @@
-import streamlit as st
+import os
+
+print("Working directory:", os.getcwd())
+print("In current directory:", os.listdir())
+print("In models directory:", os.listdir("models"))import streamlit as st
 import joblib
 import pandas as pd
 from features.build_features import build_features
