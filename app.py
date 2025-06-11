@@ -2,7 +2,7 @@ import os
 
 print("Working directory:", os.getcwd())
 print("In current directory:", os.listdir())
-print("In models directory:", os.listdir("models"))
+print("In models directory:", os.listdir("model"))
 import streamlit as st
 import joblib
 import pandas as pd
