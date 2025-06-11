@@ -16,5 +16,5 @@ model = RandomForestClassifier(n_estimators=100, random_state=42)
 model.fit(X, y)
 
 # Lagre modellen i riktig mappe
-joblib.dump(model, "models/rf_model.pkl")
 print("Modellen er lagret i model/rf_model.pkl")
+joblib.dump(model, "models/rf_model.pkl")
