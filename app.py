@@ -4,7 +4,7 @@ import pandas as pd
 from features.build_features import build_features
 
 st.title("Eliteserien AI-prediksjon")
-model = joblib.load("../models/rf_model.pkl")
+model = joblib.load("/models/rf_model.pkl")
 data = pd.read_csv("data/eliteserien_data.csv")
 
 match = st.selectbox("Velg kamp", data["match"])
